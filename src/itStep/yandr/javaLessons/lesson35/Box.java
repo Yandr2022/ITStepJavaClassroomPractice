@@ -1,10 +1,10 @@
 package itStep.yandr.javaLessons.lesson35;
 
 public class Box {
-    private int value;
+    private Object value;
 
 
-    public Box(int value) {
+    public Box(Object value) {
         this.value = value;
     }
 
@@ -12,11 +12,11 @@ public class Box {
 
     }
 
-    public int getValue() {
+    public Object getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Object value) {
         this.value = value;
     }
 
