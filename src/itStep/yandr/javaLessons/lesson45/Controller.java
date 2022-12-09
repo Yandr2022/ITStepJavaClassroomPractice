@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class Controller {
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/computerdb";
+    public static final String URL = "jdbc:mysql://localhost/computerdb";
     public static final String USER = "root";
     public static final String PASSWORD = "Zasada301187";
     public static final String SIMPLE_SELECT = "SELECT c.classcol, pc.id_pc, pc.name FROM class c JOIN pc ON pc.id_class = c.id_class;";
@@ -19,9 +19,9 @@ public class Controller {
             ResultSet resultSet = statement.executeQuery(SIMPLE_SELECT);
             int index = 1;
             while (resultSet.next()) {
-                System.out.println(index + ". " + resultSet.getString("c.classcol") + " ");
-                System.out.println(resultSet.getInt("pc.id_pc") + " ");
-                System.out.println(resultSet.getString("pc.name") + "\n");
+                System.out.print(index + ". " + resultSet.getString("classcol") + " ");
+                System.out.print(resultSet.getInt("id_pc") + " ");
+                System.out.println(resultSet.getString("name") + "\n");
                 index++;
             }
         } catch (ClassNotFoundException e) {
